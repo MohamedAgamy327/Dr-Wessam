@@ -1,0 +1,190 @@
+<div class="container">
+  <h3 mat-dialog-title>Add Driver</h3>
+
+  <form autocomplete="off" class="mat-dialog-content" [formGroup]="addForm">
+
+    <div>
+      <mat-form-field>
+        <mat-label>Vendor</mat-label>
+        <mat-select formControlName="vendorId">
+          <mat-option *ngFor="let vendor of data" [value]="vendor.id">
+            {{vendor.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="errorHandling('vendorId', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Sub Contractor" formControlName="subContractor">
+        <mat-error *ngIf="errorHandling('subContractor', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Driver Name" formControlName="driverName">
+        <mat-error *ngIf="errorHandling('driverName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="National ID" formControlName="nationalId">
+        <mat-error *ngIf="errorHandling('nationalId', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>License Type</mat-label>
+        <mat-select formControlName="licenseType">
+          <mat-option value="Private">Private</mat-option>
+          <mat-option value="GradeA">Grade A</mat-option>
+          <mat-option value="GradeB">Grade B</mat-option>
+          <mat-option value="GradeC">Grade C</mat-option>
+        </mat-select>
+        <mat-error *ngIf="errorHandling('licenseType', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="licenseExpiryDate" [matDatepicker]="pickerLicenseExpiryDate"
+          placeholder="License Expiry Date">
+        <mat-datepicker-toggle matSuffix [for]="pickerLicenseExpiryDate">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerLicenseExpiryDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Phone Number" formControlName="phoneNumber">
+        <mat-error *ngIf="errorHandling('phoneNumber', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="medicalExaminationDate" [matDatepicker]="pickerMedicalExaminationDate"
+          placeholder="Medical Examination Date">
+        <mat-datepicker-toggle matSuffix [for]="pickerMedicalExaminationDate">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerMedicalExaminationDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="drugTestDate" [matDatepicker]="pickerDrugTestDate"
+          placeholder="Drug Test Date">
+        <mat-datepicker-toggle matSuffix [for]="pickerDrugTestDate">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerDrugTestDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Defensive Driving" formControlName="defensiveDriving">
+        <mat-error *ngIf="errorHandling('defensiveDriving', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="hiringDate" [matDatepicker]="pickerHiringDate" placeholder="Hiring Date">
+        <mat-datepicker-toggle matSuffix [for]="pickerHiringDate">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerHiringDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Warning Letter 1" formControlName="warningLetter1">
+        <mat-error *ngIf="errorHandling('warningLetter1', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Warning Letter 2" formControlName="warningLetter2">
+        <mat-error *ngIf="errorHandling('warningLetter2', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Status" formControlName="status">
+        <mat-error *ngIf="errorHandling('status', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="terminationDate" [matDatepicker]="pickerTerminationDate"
+          placeholder="Termination Date">
+        <mat-datepicker-toggle matSuffix [for]="pickerTerminationDate">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerTerminationDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Status" formControlName="status">
+        <mat-error *ngIf="errorHandling('status', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Comment" formControlName="comment">
+        <mat-error *ngIf="errorHandling('comment', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" type="submit" (click)="save()" [disabled]="!addForm.valid">Save</button>
+      <button mat-raised-button color="warn" (click)="cancel()" tabindex="-1">Cancel</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+.mat-column-name {
+  width: 40% ;
+}
+
+.mat-column-department {
+  width: 40% ;
+}
+
+.mat-column-edit {
+  width: 10% ;
+}
+
+.mat-column-delete {
+  width: 10% ;
+}
