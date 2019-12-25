@@ -8,17 +8,6 @@ namespace Data.SeedData
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            //SecurePassword.CreatePasswordHash("1234", out byte[] passwordHash, out byte[] passwordSalt);
-            //modelBuilder.Entity<User>().HasData(
-            //        new User
-            //        {
-            //            Id = 4,
-            //            Name = "Agamy",
-            //            Email = "agamy@pragimtech.com",
-            //            PasswordHash = passwordHash,
-            //            PasswordSalt = passwordSalt
-            //        }
-            //    );
         }
     }
 }

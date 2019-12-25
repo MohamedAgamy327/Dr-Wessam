@@ -8,10 +8,13 @@ import { CredentialService } from 'src/app/_services';
 import {
   HomeComponent, LandingComponent,
   VendorAddDialogComponent, VendorDeleteDialogComponent, VendorEditDialogComponent, VendorsComponent,
-  VehiclesComponent, VehicleDeleteDialogComponent, VehicleEditDialogComponent, VehicleShowDialogComponent, VehicleAddDialogComponent,
-  DriverAddDialogComponent, DriverDeleteDialogComponent, DriverEditDialogComponent, DriverShowDialogComponent, DriversComponent
+  KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent, KnowingsComponent,
+  OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
+  MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent, MedicineTypesComponent,
+
 } from '.';
 import { OnlyNumber } from 'src/app/_helpers';
+
 
 
 @NgModule({
@@ -20,33 +23,22 @@ import { OnlyNumber } from 'src/app/_helpers';
     OnlyNumber,
     HomeComponent,
     LandingComponent,
-    VehiclesComponent,
-    VehicleDeleteDialogComponent,
-    VehicleEditDialogComponent,
-    VehicleShowDialogComponent,
-    VehicleAddDialogComponent,
-    DriversComponent,
-    DriverAddDialogComponent,
-    DriverShowDialogComponent,
-    DriverDeleteDialogComponent,
-    DriverEditDialogComponent,
+
     VendorAddDialogComponent,
     VendorDeleteDialogComponent,
     VendorEditDialogComponent,
-    VendorsComponent
+    VendorsComponent,
+    KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent, KnowingsComponent,
+    OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
+    MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent, MedicineTypesComponent,
   ],
   entryComponents: [
-    VehicleDeleteDialogComponent,
-    VehicleEditDialogComponent,
-    VehicleShowDialogComponent,
-    VehicleAddDialogComponent,
-    DriverAddDialogComponent,
-    DriverShowDialogComponent,
-    DriverDeleteDialogComponent,
-    DriverEditDialogComponent,
+
     VendorAddDialogComponent,
     VendorDeleteDialogComponent,
-    VendorEditDialogComponent
+    VendorEditDialogComponent, KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
+    OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent,
+    MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent
   ],
   imports: [
     CommonModule,

@@ -12,14 +12,6 @@
       </mat-form-field>
     </div>
 
-    <div class="form-margin">
-      <label>Department: </label>
-      <mat-radio-group formControlName="department">
-        <mat-radio-button value="Fleet">Fleet</mat-radio-button>
-        <mat-radio-button value="Technology">Technology</mat-radio-button>
-      </mat-radio-group>
-    </div>
-
     <div mat-dialog-actions>
       <button mat-raised-button color="primary" type="submit" (click)="save()" [disabled]="!addForm.valid">Save</button>
       <button mat-raised-button color="warn" (click)="cancel()" tabindex="-1">Cancele</button>

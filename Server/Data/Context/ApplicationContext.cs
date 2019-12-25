@@ -13,17 +13,13 @@ namespace Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            new UserMap(modelBuilder.Entity<User>());
-            new DriverMap(modelBuilder.Entity<Driver>());
-            new VendorMap(modelBuilder.Entity<Vendor>());
-            new VehicleMap(modelBuilder.Entity<Vehicle>());
-
+            new OccupationMap(modelBuilder.Entity<Occupation>());
+            new KnowingMap(modelBuilder.Entity<Knowing>());
+            new MedicineTypeMap(modelBuilder.Entity<MedicineType>());
             modelBuilder.Seed();
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Driver> Drivers { get; set; }
-        public DbSet<Vendor> Vendors { get; set; }
-        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Occupation> Occupations { get; set; }
+        public DbSet<Knowing> Knowings { get; set; }
+        public DbSet<MedicineType> MedicineTypes { get; set; }
     }
 }

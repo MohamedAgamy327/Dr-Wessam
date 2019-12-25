@@ -20,8 +20,7 @@ export class VendorAddDialogComponent {
 
   createForm() {
     this.addForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      department: ['Fleet']
+      name: ['', Validators.required]
     }
     );
   }

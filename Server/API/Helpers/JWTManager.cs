@@ -18,32 +18,32 @@ namespace API.Helpers
         {
             this.config = config;
         }
-        public string GenerateToken(User user)
-        {
-            var claims = new List<Claim>
-            {
-                new Claim("Id", user.Id.ToString()),
-                new Claim("Email", user.Email),
-                new Claim(ClaimTypes.Role, "Admin")
-            };
+        //public string GenerateToken(User user)
+        //{
+        //    var claims = new List<Claim>
+        //    {
+        //        new Claim("Id", user.Id.ToString()),
+        //        new Claim("Email", user.Email),
+        //        new Claim(ClaimTypes.Role, "Admin")
+        //    };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8
-                .GetBytes(config.GetSection("AppSettings:Token").Value));
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8
+        //        .GetBytes(config.GetSection("AppSettings:Token").Value));
 
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = creds
-            };
+        //    var tokenDescriptor = new SecurityTokenDescriptor
+        //    {
+        //        Subject = new ClaimsIdentity(claims),
+        //        Expires = DateTime.Now.AddDays(1),
+        //        SigningCredentials = creds
+        //    };
 
-            var tokenHandler = new JwtSecurityTokenHandler();
+        //    var tokenHandler = new JwtSecurityTokenHandler();
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
+        //    var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return tokenHandler.WriteToken(token);
-        }
+        //    return tokenHandler.WriteToken(token);
+        //}
     }
 }

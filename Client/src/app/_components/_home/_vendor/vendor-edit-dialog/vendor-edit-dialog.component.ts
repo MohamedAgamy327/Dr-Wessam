@@ -21,8 +21,7 @@ export class VendorEditDialogComponent {
   createForm() {
     this.editForm = this.formBuilder.group({
       id: [this.data.id],
-      name: [this.data.name, Validators.required],
-      department: [this.data.department]
+      name: [this.data.name, Validators.required]
     });
   }
 

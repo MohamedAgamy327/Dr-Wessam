@@ -16,7 +16,7 @@ export class VendorsComponent implements OnInit {
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-  displayedColumns: string[] = ['name', 'department', 'edit', 'delete'];
+  displayedColumns: string[] = ['name', 'edit', 'delete'];
   vendors: Vendor[];
   dataSource = new MatTableDataSource<Vendor>();
 

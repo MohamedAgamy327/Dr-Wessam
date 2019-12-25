@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using API.DTO.UserDTO;
 using Domain.Entities;
-using API.DTO.Vendor;
-using API.DTO.Vehicle;
-using API.DTO.Driver;
+using API.DTO.Occupation;
+using API.DTO.Knowing;
+using API.DTO.MedicineType;
 
 namespace API.Helpers
 {
@@ -12,23 +11,17 @@ namespace API.Helpers
         public MappingProfile()
         {
             // API DTO to Entity
-            CreateMap<VendorForAddDTO, Vendor>();
-            CreateMap<VendorForEditDTO, Vendor>();
-            CreateMap<VehicleForAddDTO, Vehicle>();
-            CreateMap<VehicleForEditDTO, Vehicle>();
-            CreateMap<DriverForAddDTO, Driver>();
-            CreateMap<DriverForEditDTO, Driver>();
-
-            CreateMap<UserForAddDTO, User>();
+            CreateMap<OccupationForAddDTO, Occupation>();
+            CreateMap<OccupationForEditDTO, Occupation>();
+            CreateMap<KnowingForAddDTO, Knowing>();
+            CreateMap<KnowingForEditDTO, Knowing>();
+            CreateMap<MedicineTypeForAddDTO, MedicineType>();
+            CreateMap<MedicineTypeForEditDTO, MedicineType>();
 
             // Entity to API DTO
-            CreateMap<Vendor, VendorForGetDTO>()
-             .ForMember(dest => dest.Department, opt => opt.MapFrom(src => src.Department.ToString()));
-            CreateMap<Vehicle, VehicleForGetDTO>()
-             .ForMember(dest => dest.VendorName, opt => opt.MapFrom(src => src.Vendor.Name));
-            CreateMap<Driver, DriverForGetDTO>()
-                 .ForMember(dest => dest.VendorName, opt => opt.MapFrom(src => src.Vendor.Name))
-                 .ForMember(dest => dest.LicenseType, opt => opt.MapFrom(src => src.LicenseType.ToString()));
+            CreateMap<Occupation, OccupationForGetDTO>();
+            CreateMap<Knowing, KnowingForGetDTO>();
+            CreateMap<MedicineType, MedicineTypeForGetDTO>();
         }
 
     }

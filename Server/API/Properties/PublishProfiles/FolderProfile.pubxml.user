@@ -7,5 +7,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\Deploy</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAv/4ge3IMi0OTvVnuWsuLigAAAAACAAAAAAAQZgAAAAEAACAAAABPHW5NNIltisnQkswHezK1y3rROhr++E3L1btgfiOR3gAAAAAOgAAAAAIAACAAAAAj5Cf0mPnpygMBqfIZaXpuZb8nnOxDIfIszvGCgmJJfSAAAACFXuO2PsfpHKhmiicFmrrlXeQ69iA0YcBDIR0owX4xGEAAAAA4EhtbkiKqOlCUQWGebsT7kw5IsDHrQbyxdo8D+RCNtzO0vkq4kmSsNUf/OZmutb86oLm4lDlwLaxDHGfX10QJ</EncryptedPassword>
   </PropertyGroup>
 </Project>
