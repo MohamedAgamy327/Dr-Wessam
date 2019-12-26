@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent, LandingComponent, VendorsComponent, KnowingsComponent, MedicineTypesComponent, OccupationsComponent } from '.';
+import { HomeComponent, LandingComponent, KnowingsComponent, MedicineTypesComponent, OccupationsComponent } from '.';
 
 const routes: Routes = [
   {
@@ -12,13 +12,10 @@ const routes: Routes = [
         path: 'knowings', component: KnowingsComponent
       },
       {
-        path: 'Medicinetypes', component: MedicineTypesComponent
+        path: 'medicinetypes', component: MedicineTypesComponent
       },
       {
         path: 'occupations', component: OccupationsComponent
-      },
-      {
-        path: 'vendors', component: VendorsComponent
       },
       {
         path: '', redirectTo: '', pathMatch: 'full'

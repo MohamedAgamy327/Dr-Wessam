@@ -27,10 +27,22 @@
         <span class="title" mat-line> Drivers</span>
       </a> -->
 
-      <a mat-list-item class="sidenav-link" [routerLink]="['/home/vendors']" routerLinkActive="active-list-item"
+      <a mat-list-item class="sidenav-link" [routerLink]="['/home/medicinetypes']" routerLinkActive="active-list-item"
         (click)="sidenav.toggle()">
         <!-- <mat-icon svgIcon="vendor" mat-list-icon></mat-icon> -->
-        <span class="title" mat-line> Vendors</span>
+        <span class="title" mat-line> Medicine Types</span>
+      </a>
+
+      <a mat-list-item class="sidenav-link" [routerLink]="['/home/knowings']" routerLinkActive="active-list-item"
+        (click)="sidenav.toggle()">
+        <!-- <mat-icon svgIcon="vendor" mat-list-icon></mat-icon> -->
+        <span class="title" mat-line> Know Through</span>
+      </a>
+
+      <a mat-list-item class="sidenav-link" [routerLink]="['/home/occupations']" routerLinkActive="active-list-item"
+        (click)="sidenav.toggle()">
+        <!-- <mat-icon svgIcon="vendor" mat-list-icon></mat-icon> -->
+        <span class="title" mat-line> Occupation</span>
       </a>
 
     </mat-nav-list>
@@ -42,7 +54,7 @@
       <mat-icon aria-label="Menu" class="material-icons">menu</mat-icon>
     </button>
     <h1 class="component-title">
-      <a class="title-link">Health and Safety</a>
+      <a class="title-link">Dr Wessam M. Abuelghar</a>
     </h1>
     <span class="toolbar-filler"></span>
     <button id="button-logout" mat-button (click)="editProfile()"> Profile <i

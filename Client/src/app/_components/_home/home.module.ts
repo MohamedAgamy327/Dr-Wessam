@@ -7,15 +7,11 @@ import { AddSpacePipe } from 'src/app/_custom-pipes/add-space.pipe';
 import { CredentialService } from 'src/app/_services';
 import {
   HomeComponent, LandingComponent,
-  VendorAddDialogComponent, VendorDeleteDialogComponent, VendorEditDialogComponent, VendorsComponent,
   KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent, KnowingsComponent,
   OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
-  MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent, MedicineTypesComponent,
-
+  MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent, MedicineTypesComponent
 } from '.';
 import { OnlyNumber } from 'src/app/_helpers';
-
-
 
 @NgModule({
   declarations: [
@@ -23,20 +19,12 @@ import { OnlyNumber } from 'src/app/_helpers';
     OnlyNumber,
     HomeComponent,
     LandingComponent,
-
-    VendorAddDialogComponent,
-    VendorDeleteDialogComponent,
-    VendorEditDialogComponent,
-    VendorsComponent,
     KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent, KnowingsComponent,
     OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent, MedicineTypesComponent,
   ],
   entryComponents: [
-
-    VendorAddDialogComponent,
-    VendorDeleteDialogComponent,
-    VendorEditDialogComponent, KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
+    KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
     OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent,
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent
   ],
@@ -48,4 +36,5 @@ import { OnlyNumber } from 'src/app/_helpers';
   ],
   providers: [CredentialService]
 })
+
 export class HomeModule { }

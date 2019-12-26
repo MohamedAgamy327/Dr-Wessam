@@ -20,6 +20,7 @@ using API.Helpers;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace API
 {
@@ -34,7 +35,7 @@ namespace API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IUnitOfWork, UnitOfWork>();          
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IJWTManager, JWTManager>();
             services.AddScoped<IOccupationRepository, OccupationRepository>();
             services.AddScoped<IKnowingRepository, KnowingRepository>();
@@ -59,7 +60,7 @@ namespace API
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddCors();
-            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -113,7 +114,22 @@ namespace API
             }
 
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+
+            app.Use(async (context, next) =>
+            {
+                await next().ConfigureAwait(true);
+
+                if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
+                {
+                    context.Request.Path = "/index.html";
+                    await next().ConfigureAwait(true);
+                }
+
+            });
+
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
 
             app.UseRouting();
 
