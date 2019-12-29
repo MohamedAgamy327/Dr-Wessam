@@ -12,3 +12,7 @@ export * from './_knowing/knowing-add-dialog/knowing-add-dialog.component';
 export * from './_knowing/knowing-delete-dialog/knowing-delete-dialog.component';
 export * from './_knowing/knowing-edit-dialog/knowing-edit-dialog.component';
 export * from './_knowing/knowings/knowings.component';
+export * from './_frequency/frequency-add-dialog/frequency-add-dialog.component';
+export * from './_frequency/frequency-delete-dialog/frequency-delete-dialog.component';
+export * from './_frequency/frequency-edit-dialog/frequency-edit-dialog.component';
+export * from './_frequency/frequencys/frequencys.component';

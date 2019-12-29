@@ -37,8 +37,10 @@ namespace API
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IJWTManager, JWTManager>();
-            services.AddScoped<IOccupationRepository, OccupationRepository>();
+
             services.AddScoped<IKnowingRepository, KnowingRepository>();
+            services.AddScoped<IFrequencyRepository, FrequencyRepository>();
+            services.AddScoped<IOccupationRepository, OccupationRepository>();          
             services.AddScoped<IMedicineTypeRepository, MedicineTypeRepository>();
 
             services.AddAutoMapper(typeof(Startup));

@@ -12,14 +12,17 @@ namespace Data.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-            new OccupationMap(modelBuilder.Entity<Occupation>());
+            base.OnModelCreating(modelBuilder);          
             new KnowingMap(modelBuilder.Entity<Knowing>());
+            new FrequencyMap(modelBuilder.Entity<Frequency>());
+            new OccupationMap(modelBuilder.Entity<Occupation>());          
             new MedicineTypeMap(modelBuilder.Entity<MedicineType>());
             modelBuilder.Seed();
         }
-        public DbSet<Occupation> Occupations { get; set; }
+
         public DbSet<Knowing> Knowings { get; set; }
+        public DbSet<Frequency> Frequencys { get; set; }
+        public DbSet<Occupation> Occupations { get; set; }      
         public DbSet<MedicineType> MedicineTypes { get; set; }
     }
 }

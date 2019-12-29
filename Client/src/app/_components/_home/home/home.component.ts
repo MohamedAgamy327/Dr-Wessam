@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { CredentialService, RepositoryService } from 'src/app/_services';
-import { MatSnackBar, MatDialog, MatIconRegistry } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
+import { CredentialService } from 'src/app/_services';
 
 @Component({
   selector: 'app-home',
@@ -10,24 +8,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class HomeComponent {
 
-  constructor(public credentialService: CredentialService, private dialog: MatDialog, private matIconRegistry: MatIconRegistry,
-              private domSanitizer: DomSanitizer) {
+  panelOpenState = false;
 
-    this.matIconRegistry.addSvgIcon(
-      `vehicle`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/vehicle.svg')
-    );
-
-    this.matIconRegistry.addSvgIcon(
-      `driver`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/driver.svg')
-    );
-
-    this.matIconRegistry.addSvgIcon(
-      `vendor`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./assets/img/vendor.svg')
-    );
-
+  constructor(public credentialService: CredentialService) {
   }
 
   editProfile() {
