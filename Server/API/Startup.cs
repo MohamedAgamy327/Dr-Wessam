@@ -40,7 +40,8 @@ namespace API
 
             services.AddScoped<IKnowingRepository, KnowingRepository>();
             services.AddScoped<IFrequencyRepository, FrequencyRepository>();
-            services.AddScoped<IOccupationRepository, OccupationRepository>();          
+            services.AddScoped<IOccupationRepository, OccupationRepository>();
+            services.AddScoped<IInstructionRepository, InstructionRepository>();
             services.AddScoped<IMedicineTypeRepository, MedicineTypeRepository>();
 
             services.AddAutoMapper(typeof(Startup));

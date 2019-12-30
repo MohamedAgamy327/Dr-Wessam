@@ -11,7 +11,9 @@ import {
   OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
   MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent,
   MedicineTypeEditDialogComponent, MedicineTypesComponent, FrequencysComponent,
-  FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent
+  FrequencyAddDialogComponent, FrequencyEditDialogComponent,
+  FrequencyDeleteDialogComponent, InstructionsComponent, InstructionAddDialogComponent,
+  InstructionEditDialogComponent, InstructionDeleteDialogComponent
 } from '.';
 import { OnlyNumber } from 'src/app/_helpers';
 
@@ -25,13 +27,15 @@ import { OnlyNumber } from 'src/app/_helpers';
     OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent, OccupationsComponent,
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent,
     MedicineTypeEditDialogComponent, MedicineTypesComponent, FrequencysComponent,
-    FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent
+    FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent,
+    InstructionsComponent, InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent
   ],
   entryComponents: [
     KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
     OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent,
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent,
-    FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent
+    FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent,
+    InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent
   ],
   imports: [
     CommonModule,

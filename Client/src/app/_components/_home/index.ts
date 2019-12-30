@@ -16,3 +16,7 @@ export * from './_frequency/frequency-add-dialog/frequency-add-dialog.component'
 export * from './_frequency/frequency-delete-dialog/frequency-delete-dialog.component';
 export * from './_frequency/frequency-edit-dialog/frequency-edit-dialog.component';
 export * from './_frequency/frequencys/frequencys.component';
+export * from './_instruction/instruction-add-dialog/instruction-add-dialog.component';
+export * from './_instruction/instruction-delete-dialog/instruction-delete-dialog.component';
+export * from './_instruction/instruction-edit-dialog/instruction-edit-dialog.component';
+export * from './_instruction/instructions/instructions.component';

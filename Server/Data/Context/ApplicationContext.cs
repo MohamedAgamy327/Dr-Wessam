@@ -14,15 +14,17 @@ namespace Data.Context
         {
             base.OnModelCreating(modelBuilder);          
             new KnowingMap(modelBuilder.Entity<Knowing>());
-            new FrequencyMap(modelBuilder.Entity<Frequency>());
-            new OccupationMap(modelBuilder.Entity<Occupation>());          
+            new FrequencyMap(modelBuilder.Entity<Frequency>());           
+            new OccupationMap(modelBuilder.Entity<Occupation>());
+            new InstructionMap(modelBuilder.Entity<Instruction>());
             new MedicineTypeMap(modelBuilder.Entity<MedicineType>());
             modelBuilder.Seed();
         }
 
         public DbSet<Knowing> Knowings { get; set; }
         public DbSet<Frequency> Frequencys { get; set; }
-        public DbSet<Occupation> Occupations { get; set; }      
+        public DbSet<Occupation> Occupations { get; set; }
+        public DbSet<Instruction> Instructions { get; set; }
         public DbSet<MedicineType> MedicineTypes { get; set; }
     }
 }

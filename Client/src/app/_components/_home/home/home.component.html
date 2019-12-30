@@ -14,7 +14,7 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Medicine Settings
+              Settings
             </mat-panel-title>
 
           </mat-expansion-panel-header>
@@ -29,23 +29,20 @@
             <span class="title" mat-line> Frequency</span>
           </a>
 
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Patient Settings
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-
           <a mat-list-item class="sidenav-link" [routerLink]="['/home/knowings']" routerLinkActive="active-list-item"
-            (click)="sidenav.toggle()">
-            <span class="title" mat-line> Know Through</span>
-          </a>
+          (click)="sidenav.toggle()">
+          <span class="title" mat-line> Know Through</span>
+        </a>
 
-          <a mat-list-item class="sidenav-link" [routerLink]="['/home/occupations']" routerLinkActive="active-list-item"
-            (click)="sidenav.toggle()">
-            <span class="title" mat-line> Occupation</span>
-          </a>
+        <a mat-list-item class="sidenav-link" [routerLink]="['/home/occupations']" routerLinkActive="active-list-item"
+          (click)="sidenav.toggle()">
+          <span class="title" mat-line> Occupation</span>
+        </a>
+
+        <a mat-list-item class="sidenav-link" [routerLink]="['/home/instructions']" routerLinkActive="active-list-item"
+        (click)="sidenav.toggle()">
+        <span class="title" mat-line> Instruction</span>
+      </a>
 
         </mat-expansion-panel>
       </mat-accordion>

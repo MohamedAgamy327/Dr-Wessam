@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
   HomeComponent, LandingComponent, KnowingsComponent,
-  MedicineTypesComponent, OccupationsComponent, FrequencysComponent
+  MedicineTypesComponent, OccupationsComponent, FrequencysComponent, InstructionsComponent
 } from '.';
 
 const routes: Routes = [
@@ -22,6 +22,9 @@ const routes: Routes = [
       },
       {
         path: 'frequencys', component: FrequencysComponent
+      },
+      {
+        path: 'instructions', component: InstructionsComponent
       },
       {
         path: '', redirectTo: '', pathMatch: 'full'
