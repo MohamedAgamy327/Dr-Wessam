@@ -13,7 +13,10 @@ import {
   MedicineTypeEditDialogComponent, MedicineTypesComponent, FrequencysComponent,
   FrequencyAddDialogComponent, FrequencyEditDialogComponent,
   FrequencyDeleteDialogComponent, InstructionsComponent, InstructionAddDialogComponent,
-  InstructionEditDialogComponent, InstructionDeleteDialogComponent
+  InstructionEditDialogComponent, InstructionDeleteDialogComponent,
+  PatientsComponent, PatientAddDialogComponent, PatientShowDialogComponent,
+  PatientEditDialogComponent, PatientDeleteDialogComponent,
+   MedicinesComponent, MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent
 } from '.';
 import { OnlyNumber } from 'src/app/_helpers';
 
@@ -28,14 +31,21 @@ import { OnlyNumber } from 'src/app/_helpers';
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent,
     MedicineTypeEditDialogComponent, MedicineTypesComponent, FrequencysComponent,
     FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent,
-    InstructionsComponent, InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent
+    InstructionsComponent, InstructionAddDialogComponent, InstructionEditDialogComponent,
+    InstructionDeleteDialogComponent,
+    PatientsComponent, PatientAddDialogComponent, PatientShowDialogComponent,
+    PatientEditDialogComponent, PatientDeleteDialogComponent,
+    MedicinesComponent, MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent
   ],
   entryComponents: [
     KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
     OccupationAddDialogComponent, OccupationDeleteDialogComponent, OccupationEditDialogComponent,
     MedicineTypeAddDialogComponent, MedicineTypeDeleteDialogComponent, MedicineTypeEditDialogComponent,
     FrequencyAddDialogComponent, FrequencyEditDialogComponent, FrequencyDeleteDialogComponent,
-    InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent
+    InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent,
+    PatientAddDialogComponent, PatientShowDialogComponent,
+    PatientEditDialogComponent, PatientDeleteDialogComponent,
+    MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent
   ],
   imports: [
     CommonModule,

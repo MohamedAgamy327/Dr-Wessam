@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
   HomeComponent, LandingComponent, KnowingsComponent,
-  MedicineTypesComponent, OccupationsComponent, FrequencysComponent, InstructionsComponent
+  MedicineTypesComponent, OccupationsComponent, FrequencysComponent,
+  InstructionsComponent, PatientsComponent, MedicinesComponent
 } from '.';
 
 const routes: Routes = [
@@ -18,6 +19,9 @@ const routes: Routes = [
         path: 'medicinetypes', component: MedicineTypesComponent
       },
       {
+        path: 'medicines', component: MedicinesComponent
+      },
+      {
         path: 'occupations', component: OccupationsComponent
       },
       {
@@ -25,6 +29,9 @@ const routes: Routes = [
       },
       {
         path: 'instructions', component: InstructionsComponent
+      },
+      {
+        path: 'patients', component: PatientsComponent
       },
       {
         path: '', redirectTo: '', pathMatch: 'full'

@@ -20,3 +20,12 @@ export * from './_instruction/instruction-add-dialog/instruction-add-dialog.comp
 export * from './_instruction/instruction-delete-dialog/instruction-delete-dialog.component';
 export * from './_instruction/instruction-edit-dialog/instruction-edit-dialog.component';
 export * from './_instruction/instructions/instructions.component';
+export * from './_patient/patient-add-dialog/patient-add-dialog.component';
+export * from './_patient/patient-delete-dialog/patient-delete-dialog.component';
+export * from './_patient/patient-edit-dialog/patient-edit-dialog.component';
+export * from './_patient/patient-show-dialog/patient-show-dialog.component';
+export * from './_patient/patients/patients.component';
+export * from './_medicine/medicine-add-dialog/medicine-add-dialog.component';
+export * from './_medicine/medicine-delete-dialog/medicine-delete-dialog.component';
+export * from './_medicine/medicine-edit-dialog/medicine-edit-dialog.component';
+export * from './_medicine/medicines/medicines.component';
