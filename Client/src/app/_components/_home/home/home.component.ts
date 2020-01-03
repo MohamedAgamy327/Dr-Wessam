@@ -21,9 +21,7 @@ export class HomeComponent {
   logout() {
     this.credentialService.logout();
   }
-  showLeftMenu(){
 
-  }
 
 
 }

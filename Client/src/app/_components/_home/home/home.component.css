@@ -42,18 +42,37 @@ background-color:#cfddec;
 
 }
 
-
-@media (max-width: 450) and (min-width: 200) {
-
+@media screen and (min-width: 600px){
+  .app-content{
+    width: 100% ;
+  display: block;
+  position: relative;
+  }
+  .app-contentshow{
+    width: 85% ;
+    display: block;
+    position: relative;
+    opacity: 0.6;
+    margin-left: 15%;
+  }
+  .app-sidenav{
+  
+  display:none;
+  }
+  
   .app-sidenavshow{
     position: absolute;
     display:inline-block;
     z-index: 9999;
-    width: 100%;
+    width: 15%;
   height: 100vh;
   background-color:#cfddec;
-
   
+  }
+}
+@media screen and (max-width: 600px){
+  .app-sidenavshow{
+    width: 100%;
   }
 
   .app-contentshow{
@@ -61,10 +80,11 @@ background-color:#cfddec;
   }
 
   .app-content{
-    width: 100% ;
-  display: block;
-  position: relative;
+    width: fit-content;
+ 
   }
 
-  
 }
+
+
+
