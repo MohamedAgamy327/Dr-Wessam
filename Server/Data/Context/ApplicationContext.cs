@@ -31,6 +31,11 @@ namespace Data.Context
         public DbSet<Occupation> Occupations { get; set; }
         public DbSet<Instruction> Instructions { get; set; }     
         public DbSet<MedicineType> MedicineTypes { get; set; }
-       
+        public DbSet<Prescription> Prescriptions { get; set; }
+        public DbSet<PrescriptionInstruction> PrescriptionInstructions { get; set; }
+        public DbSet<PrescriptionMedicine> PrescriptionMedicines { get; set; }
+
+
+
     }
 }
