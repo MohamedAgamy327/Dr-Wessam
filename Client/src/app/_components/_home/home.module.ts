@@ -20,6 +20,7 @@ import {
 } from '.';
 import { OnlyNumber } from 'src/app/_helpers';
 import { PrescriptionComponent } from './_patient/prescription/prescription.component';
+import { MedicineDialogComponent } from './_patient/prescription/medicine-dialog/medicine-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { PrescriptionComponent } from './_patient/prescription/prescription.comp
     InstructionDeleteDialogComponent,
     PatientsComponent, PatientAddDialogComponent, PatientShowDialogComponent,
     PatientEditDialogComponent, PatientDeleteDialogComponent,
-    MedicinesComponent, MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent, PrescriptionComponent
+    MedicinesComponent, MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent, PrescriptionComponent, MedicineDialogComponent
   ],
   entryComponents: [
     KnowingAddDialogComponent, KnowingDeleteDialogComponent, KnowingEditDialogComponent,
@@ -46,7 +47,8 @@ import { PrescriptionComponent } from './_patient/prescription/prescription.comp
     InstructionAddDialogComponent, InstructionEditDialogComponent, InstructionDeleteDialogComponent,
     PatientAddDialogComponent, PatientShowDialogComponent,
     PatientEditDialogComponent, PatientDeleteDialogComponent,
-    MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent
+    MedicineAddDialogComponent, MedicineEditDialogComponent, MedicineDeleteDialogComponent,
+    MedicineDialogComponent
   ],
   imports: [
     CommonModule,
