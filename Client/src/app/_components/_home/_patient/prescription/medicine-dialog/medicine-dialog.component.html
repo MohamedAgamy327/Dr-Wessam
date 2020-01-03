@@ -1,1 +1,64 @@
-<p>medicine-dialog works!</p>
+
+<h3 mat-dialog-title>Add Medicine</h3>
+
+<form autocomplete="off" class="mat-dialog-content" [formGroup]="addForm">
+
+
+<div fxLayout>
+    <div fxFlex="45%">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name"   >
+        
+          </mat-form-field>
+    </div>
+
+    <div fxFlex="45%" fxFlexOffset="3%">
+        <mat-form-field>
+        <input matInput type="text" placeholder="Type"    >
+    
+      </mat-form-field>
+    </div>
+</div>
+<div fxLayout>
+    <div fxFlex="45%">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Frecuncy" >
+        
+          </mat-form-field>
+    </div>
+
+    <div fxFlex="45%" fxFlexOffset="3%">
+        <mat-form-field>
+        <input matInput type="text" placeholder="Duration" >
+    
+      </mat-form-field>
+    </div>
+</div>
+
+<div fxLayout>
+    <div fxFlex="94%">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Note(Arabic)" >
+        
+          </mat-form-field>
+    </div>
+
+ 
+</div>
+<div fxLayout>
+    <div fxFlex="94%">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Note(English)" >
+        
+          </mat-form-field>
+    </div>
+
+ 
+</div>
+
+<div mat-dialog-actions class="action-buttons">
+    <button mat-flat-button color="warn" style="width: 104px; margin-right: 8px" (click)="onSave()"
+      type="submit">Save</button>
+    <button mat-stroked-button color="warn" style="width: 104px" (click)="onCancelClick($event)">Cancel</button>
+  </div>
+</form>

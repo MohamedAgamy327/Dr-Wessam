@@ -2,6 +2,8 @@ import { Component, OnInit ,ViewChild} from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { RepositoryService } from 'src/app/_services';
 import { Medicine, MedicineType, Frequency } from 'src/app/_models';
+import { MedicineDialogComponent } from './medicine-dialog/medicine-dialog.component';
+
 
 import { MatTableDataSource, MatPaginator, MatSort, MatSnackBar, MatDialog } from '@angular/material';
 import { Patient, Occupation, Knowing } from 'src/app/_models';
@@ -71,4 +73,20 @@ patientModel:any;
         });
       });
   }
+addMedicine(){
+
+   const dialogRef = this.dialog.open(MedicineDialogComponent, {
+      data: {operation:"AddMedicine" ,PatientId:"1" },
+         width: "50%",
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+      
+      
+      }
+    });
+}
+
+
 }

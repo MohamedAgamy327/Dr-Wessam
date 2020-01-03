@@ -65,18 +65,8 @@
   <hr>
 
 <!-- Medcine Templates -->
-<div>
-  <h2 fxLayoutAlign="center">Patient Prescriptions</h2>
-
-
- 
-   
-   
-      <button class="add-input" mat-fab (click)="add()" color="primary">
-        <mat-icon>add</mat-icon>
-      </button>
-    
-  
+<div >
+  <h2 fxLayoutAlign="center">Patient Medicines</h2>  
     <table mat-table [dataSource]="medicines" matSort>
   
       <ng-container matColumnDef="name">
@@ -128,7 +118,12 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-  
+    <div fxLayout fxLayoutAlign="center">
+      
+    <button class="add-input" mat-fab (click)="addMedicine()" color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
   
 
 </div>
