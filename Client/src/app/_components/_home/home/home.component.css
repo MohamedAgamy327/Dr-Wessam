@@ -7,10 +7,36 @@
 }
 
 .toolbar{
-  background-color: #e60000;
+  background-color: #437de6;;
   color: #ffffff ;
 }
 
 .active-list-item {
   color: #3F51B5 !important; /* Note: You could also use a custom theme */
+}
+
+.app-content{
+  width: 100% ;
+ 
+
+}
+.app-contentshow{
+  width: 85% ;
+
+  opacity: 0.6;
+  margin-left: 15%;
+}
+.app-sidenav{
+
+display:none;
+}
+
+.app-sidenavshow{
+  position: absolute;
+  display:inline-block;
+  z-index: 9999;
+  width: 15%;
+height: 100vh;
+background-color:#cfddec;
+
 }

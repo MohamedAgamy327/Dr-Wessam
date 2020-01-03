@@ -54,10 +54,17 @@ namespace API.Controllers
             return Ok(mapper.Map<PatientForGetDTO>(patient));
         }
 
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(mapper.Map<List<PatientForGetDTO>>(await patientRepository.Get().ConfigureAwait(true)));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            return Ok(mapper.Map<PatientForGetDTO>(await patientRepository.Get(id).ConfigureAwait(true)));
         }
     }
 }

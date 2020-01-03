@@ -5,6 +5,7 @@ import {
   MedicineTypesComponent, OccupationsComponent, FrequencysComponent,
   InstructionsComponent, PatientsComponent, MedicinesComponent
 } from '.';
+import { PrescriptionComponent } from './_patient/prescription/prescription.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,9 @@ const routes: Routes = [
       },
       {
         path: 'patients', component: PatientsComponent
+      },
+       {
+        path: 'prescription/:id', component: PrescriptionComponent
       },
       {
         path: '', redirectTo: '', pathMatch: 'full'

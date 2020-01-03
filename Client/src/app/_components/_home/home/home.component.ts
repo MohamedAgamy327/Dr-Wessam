@@ -9,6 +9,7 @@ import { CredentialService } from 'src/app/_services';
 export class HomeComponent {
 
   panelOpenState = false;
+  leftMenu=false;
 
   constructor(public credentialService: CredentialService) {
   }
@@ -19,6 +20,9 @@ export class HomeComponent {
 
   logout() {
     this.credentialService.logout();
+  }
+  showLeftMenu(){
+
   }
 
 

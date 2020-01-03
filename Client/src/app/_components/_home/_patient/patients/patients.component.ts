@@ -6,7 +6,7 @@ import { PatientDeleteDialogComponent } from '../patient-delete-dialog/patient-d
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort, MatSnackBar, MatDialog } from '@angular/material';
 import { PatientShowDialogComponent } from '../patient-show-dialog/patient-show-dialog.component';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-patients',
   templateUrl: './patients.component.html',
@@ -17,13 +17,13 @@ export class PatientsComponent implements OnInit {
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-  displayedColumns: string[] = ['code', 'name', 'phone1', 'show', 'edit', 'delete'];
+  displayedColumns: string[] = ['code', 'name', 'phone1', 'show', 'edit', 'delete','prescription'];
   patients: Patient[];
   occupations: Occupation[];
   knowings: Knowing[];
   dataSource = new MatTableDataSource<Patient>();
 
-  constructor(private repository: RepositoryService, private snackBar: MatSnackBar, private dialog: MatDialog) { }
+  constructor(private repository: RepositoryService,private router:Router ,private snackBar: MatSnackBar, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.getPatients();
@@ -69,6 +69,10 @@ export class PatientsComponent implements OnInit {
           panelClass: ['red-snackbar']
         });
       });
+  }
+
+  goToAddPrescription(patient){
+this.router.navigate(['/home/prescription',patient.id]);
   }
 
   applyFilter(filterValue: string) {

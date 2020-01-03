@@ -17,7 +17,16 @@ export class RepositoryService {
       `${environment.serverUrl + url}`,
       params
     );
+    
     return this.http.get(requestUrl);
+  }
+   getById(url: string, params?: any) {
+    const requestUrl = this.generateUrl(
+      `${environment.serverUrl + url}`,
+      params
+    );
+    
+    return this.http.get(requestUrl+"/"+params);
   }
 
   delete(url: string, params?: any) {
