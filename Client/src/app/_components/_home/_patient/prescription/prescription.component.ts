@@ -20,6 +20,7 @@ patientModel:any;
   medicines: Medicine[];
   medicineTypes: MedicineType[];
   frequencys: Frequency[];
+
   dataSource = new MatTableDataSource<Medicine>();
   constructor( private route:ActivatedRoute,private repository: RepositoryService,private snackBar: MatSnackBar, private dialog: MatDialog) { }
 
@@ -74,9 +75,11 @@ patientModel:any;
       });
   }
 addMedicine(){
-
    const dialogRef = this.dialog.open(MedicineDialogComponent, {
-      data: {operation:"AddMedicine" ,PatientId:"1" },
+      data: {
+      operation:"AddMedicine" ,
+      PatientId:parseInt(this.route.snapshot.paramMap.get('id'))
+      },
          width: "50%",
     });
 
