@@ -9,7 +9,7 @@ namespace Repository.IRepository
         Task<Prescription> Add(Prescription prescription);
         Prescription Edit(Prescription prescription);
         void Remove(Prescription prescription);
-        Task<Prescription> Get(int id);
-        Task<IEnumerable<Prescription>> Get();
+        Task<Prescription> GetById(int id);
+        Task<IEnumerable<Prescription>> Get(int patientId);
     }
 }

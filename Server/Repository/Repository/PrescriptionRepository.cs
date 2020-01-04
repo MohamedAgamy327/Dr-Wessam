@@ -3,6 +3,7 @@ using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Repository.IRepository;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Repository.Repository
@@ -24,13 +25,10 @@ namespace Repository.Repository
             context.Entry(prescription).State = EntityState.Modified;
             return prescription;
         }
-        public async Task<Prescription> Get(int id)
+    
+        public async Task<IEnumerable<Prescription>> Get( int PatientId)
         {
-            return await context.Prescriptions.FindAsync(id);
-        }
-        public async Task<IEnumerable<Prescription>> Get()
-        {
-            return await context.Prescriptions.Include(i => i.PatientId).ToListAsync();
+            return await context.Prescriptions.Where(p=>p.PatientId== PatientId).ToListAsync();
         }
 
         public void Remove(Prescription prescription)
